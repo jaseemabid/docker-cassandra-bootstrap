@@ -67,7 +67,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.ReadLatency.p95",
                 "refId": "A",
@@ -159,7 +159,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"95thPercentile\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.ReadLatency.p95",
                 "refId": "A",
@@ -243,7 +243,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"95thPercentile\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.ReadLatency.p95",
                 "refId": "A",
@@ -327,7 +327,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.ReadLatency.m1",
                 "refId": "A",
@@ -411,7 +411,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.ReadLatency.m1",
                 "refId": "A",
@@ -496,7 +496,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_ReadLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.ReadLatency.m1",
                 "refId": "A",
@@ -592,7 +592,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.RangeLatency.p95",
                 "refId": "A",
@@ -676,7 +676,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"95thPercentile\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.RangeLatency.p95",
                 "refId": "A",
@@ -760,7 +760,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"95thPercentile\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.RangeLatency.p95",
                 "refId": "A",
@@ -844,7 +844,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.RangeLatency.m1",
                 "refId": "A",
@@ -928,7 +928,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.RangeLatency.m1",
                 "refId": "A",
@@ -1013,7 +1013,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RangeLatency{ec2_tag_role=\"$role\", unit=\"OneMinuteRate\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.RangeLatency.m1",
                 "refId": "A",
@@ -1109,7 +1109,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.TombstoneScanned.p95",
                 "refId": "A",
@@ -1208,7 +1208,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.TombstoneScanned.p95",
                 "refId": "A",
@@ -1292,7 +1292,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.TombstoneScanned.p95",
                 "refId": "A",
@@ -1413,7 +1413,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"Max\"}) by (keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"Max\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.TombstoneScanned.max",
                 "refId": "A",
@@ -1505,7 +1505,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"Max\"}) by (role, host)",
+                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"Max\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.TombstoneScanned.max",
                 "refId": "A",
@@ -1589,7 +1589,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{role=\"$role\", unit=\"Max\"}) by (role, host, keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_TombstoneScannedHistogram{ec2_tag_role=\"$role\", unit=\"Max\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.TombstoneScanned.max",
                 "refId": "A",
@@ -1723,7 +1723,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.SSTablesPerRead.p95",
                 "refId": "A",
@@ -1815,7 +1815,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.SSTablesPerRead.p95",
                 "refId": "A",
@@ -1899,7 +1899,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{role=\"$role\", unit=\"95thPercentile\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{ec2_tag_role=\"$role\", unit=\"95thPercentile\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.SSTablesPerRead.p95",
                 "refId": "A",
@@ -1983,7 +1983,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{role=\"$role\", unit=\"Max\"}) by (role, host, keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_SSTablesPerReadHistogram{ec2_tag_role=\"$role\", unit=\"Max\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.SSTablesPerRead.max",
                 "refId": "A",
@@ -2079,7 +2079,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.MeanRowSize",
                 "refId": "A",
@@ -2179,7 +2179,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.MeanRowSize",
                 "refId": "A",
@@ -2263,7 +2263,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_MeanRowSize{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.MeanRowSize",
                 "refId": "A",
@@ -2384,7 +2384,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{role=\"$role\"}) by (keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.MaxRowSize",
                 "refId": "A",
@@ -2477,7 +2477,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{role=\"$role\"}) by (role, host)",
+                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.MaxRowSize",
                 "refId": "A",
@@ -2561,7 +2561,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.MaxRowSize",
                 "refId": "A",
@@ -2657,7 +2657,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.KeyCacheHitRate",
                 "refId": "A",
@@ -2742,7 +2742,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.KeyCacheHitRate",
                 "refId": "A",
@@ -2826,7 +2826,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_KeyCacheHitRate{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.KeyCacheHitRate",
                 "refId": "A",
@@ -2922,7 +2922,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.RowCacheMiss",
                 "refId": "A",
@@ -2930,7 +2930,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.RowCacheHit",
                 "refId": "B",
@@ -3015,7 +3015,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.RowCacheMiss",
                 "refId": "A",
@@ -3023,7 +3023,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.RowCacheHit",
                 "refId": "B",
@@ -3108,7 +3108,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheMiss{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "interval": "",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.RowCacheMiss",
@@ -3117,7 +3117,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_RowCacheHit{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.RowCacheHit",
                 "refId": "B",
@@ -3251,7 +3251,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.BloomFilterFalseRatio",
                 "refId": "A",
@@ -3343,7 +3343,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.BloomFilterFalseRatio",
                 "refId": "A",
@@ -3427,7 +3427,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterFalseRatio{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.BloomFilterFalseRatio",
                 "refId": "A",
@@ -3549,7 +3549,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{role=\"$role\"}) by (keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{ec2_tag_role=\"$role\"}) by (keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{keyspace}}.{{table}}.BloomFilterDiskSpaceUsed",
                 "refId": "A",
@@ -3641,7 +3641,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{role=\"$role\"}) by (role, host)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.BloomFilterDiskSpaceUsed",
                 "refId": "A",
@@ -3725,7 +3725,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{role=\"$role\"}) by (role, host, keyspace, table)",
+                "expr": "avg(org_apache_cassandra_metrics_Table_BloomFilterDiskSpaceUsed{ec2_tag_role=\"$role\"}) by (ec2_tag_role, host, keyspace, table)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{keyspace}}.{{table}}.BloomFilterDiskSpaceUsed",
                 "refId": "A",

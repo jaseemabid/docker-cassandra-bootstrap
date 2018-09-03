@@ -239,7 +239,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"75thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"75thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p75",
                 "refId": "A",
@@ -247,7 +247,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"95thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"95thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "hide": false,
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p95",
@@ -256,7 +256,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"99thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Read\", unit=\"99thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "hide": false,
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p99",
@@ -393,7 +393,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"75thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"75thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p75",
                 "refId": "A",
@@ -401,7 +401,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"95thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"95thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p95",
                 "refId": "B",
@@ -409,7 +409,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"99thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope=\"Write\", unit=\"99thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p99",
                 "refId": "C",
@@ -545,7 +545,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope!=\"Write\", scope!=\"Read\", unit=\"95thPercentile\"}) by (role, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{scope!=\"Write\", scope!=\"Read\", unit=\"95thPercentile\"}) by (ec2_tag_role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.p95",
                 "refId": "A",
@@ -681,7 +681,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_DroppedMessages_Dropped) by (role, message_type)",
+                "expr": "avg(org_apache_cassandra_metrics_DroppedMessages_Dropped) by (ec2_tag_role, message_type)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{message_type}}",
                 "refId": "A",
@@ -814,7 +814,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(collectd_load_shortterm) by (role)",
+                "expr": "avg(collectd_load_shortterm) by (ec2_tag_role)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.load.shortterm",
                 "refId": "A",
@@ -942,7 +942,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(collectd_df_percent_bytes{type!=\"free\"}) by (role, host, df)",
+                "expr": "sum(collectd_df_percent_bytes{type!=\"free\"}) by (ec2_tag_role, host, df)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{df}}",
                 "refId": "A",
