@@ -87,7 +87,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu!=\"idle\"}) / sum(collectd_cpu_count{environment=\"$env\", data_center=\"$dc\"})",
+                "expr": "sum(collectd_cpu_percent{role=\"$role\", cpu!=\"idle\"}) / sum(collectd_cpu_count{role=\"$role\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -96,7 +96,7 @@
                 "textEditor": false
               },
               {
-                "expr": "sum(collectd_cpu_count{environment=\"$env\", data_center=\"$dc\"})",
+                "expr": "sum(collectd_cpu_count{role=\"$role\"})",
                 "format": "time_series",
                 "hide": true,
                 "legendFormat": "",
@@ -180,7 +180,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_memory{environment=\"$env\", data_center=\"$dc\", memory!=\"free\"}) / sum(collectd_memory{environment=\"$env\", data_center=\"$dc\"}) * 100",
+                "expr": "sum(collectd_memory{role=\"$role\", memory!=\"free\"}) / sum(collectd_memory{role=\"$role\"}) * 100",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -189,7 +189,7 @@
                 "textEditor": false
               },
               {
-                "expr": "sum(collectd_memory{environment=\"$env\", data_center=\"$dc\"})",
+                "expr": "sum(collectd_memory{role=\"$role\"})",
                 "format": "time_series",
                 "hide": true,
                 "legendFormat": "",
@@ -273,7 +273,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_df_df_complex{environment=\"$env\", data_center=\"$dc\", df=\"var-lib-cassandra\", type=\"used\"}) / sum(collectd_df_df_complex{environment=\"$env\", data_center=\"$dc\", df=\"var-lib-cassandra\"}) * 100",
+                "expr": "sum(collectd_df_df_complex{role=\"$role\", df=\"var-lib-cassandra\", type=\"used\"}) / sum(collectd_df_df_complex{role=\"$role\", df=\"var-lib-cassandra\"}) * 100",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -282,7 +282,7 @@
                 "textEditor": false
               },
               {
-                "expr": "sum(collectd_df_df_complex{environment=\"$env\", data_center=\"$dc\", df=\"var-lib-cassandra\"})",
+                "expr": "sum(collectd_df_df_complex{role=\"$role\", df=\"var-lib-cassandra\"})",
                 "format": "time_series",
                 "hide": true,
                 "legendFormat": "",
@@ -364,7 +364,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu!=\"idle\"}) * 0.01",
+                "expr": "sum(collectd_cpu_percent{role=\"$role\", cpu!=\"idle\"}) * 0.01",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -444,7 +444,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_cpu_count{environment=\"$env\", data_center=\"$dc\"})",
+                "expr": "sum(collectd_cpu_count{role=\"$role\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -524,7 +524,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_memory{environment=\"$env\", data_center=\"$dc\", memory!=\"free\"})",
+                "expr": "sum(collectd_memory{role=\"$role\", memory!=\"free\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -604,7 +604,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_memory{environment=\"$env\", data_center=\"$dc\"})",
+                "expr": "sum(collectd_memory{role=\"$role\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -684,7 +684,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_df_df_complex{environment=\"$env\", data_center=\"$dc\", df=\"var-lib-cassandra\", type=\"used\"})",
+                "expr": "sum(collectd_df_df_complex{role=\"$role\", df=\"var-lib-cassandra\", type=\"used\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -764,7 +764,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "sum(collectd_df_df_complex{environment=\"$env\", data_center=\"$dc\", df=\"var-lib-cassandra\"})",
+                "expr": "sum(collectd_df_df_complex{role=\"$role\", df=\"var-lib-cassandra\"})",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",

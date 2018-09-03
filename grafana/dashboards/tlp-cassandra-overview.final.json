@@ -86,7 +86,7 @@
             ],
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"CompletedTasks\", thread_type=\"internal\", thread_pool=\"GossipStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"CompletedTasks\", thread_type=\"internal\", thread_pool=\"GossipStage\"}",
                 "format": "table",
                 "legendFormat": "",
                 "refId": "A",
@@ -144,7 +144,7 @@
             ],
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"CompletedTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"CompletedTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
                 "format": "table",
                 "legendFormat": "",
                 "refId": "A",
@@ -234,7 +234,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"CompletedTasks\", thread_type=\"internal\", thread_pool=\"GossipStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"CompletedTasks\", thread_type=\"internal\", thread_pool=\"GossipStage\"}",
                 "format": "time_series",
                 "legendFormat": "",
                 "refId": "A",
@@ -380,7 +380,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Read\", unit=\"75thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Read\", unit=\"75thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p75",
                 "refId": "A",
@@ -388,7 +388,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Read\", unit=\"95thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Read\", unit=\"95thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "hide": false,
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p95",
@@ -397,7 +397,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Read\", unit=\"99thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Read\", unit=\"99thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "hide": false,
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p99",
@@ -533,7 +533,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Write\", unit=\"75thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Write\", unit=\"75thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p75",
                 "refId": "A",
@@ -541,7 +541,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Write\", unit=\"95thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Write\", unit=\"95thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p95",
                 "refId": "B",
@@ -549,7 +549,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Write\", unit=\"99thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Write\", unit=\"99thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Latency.p99",
                 "refId": "C",
@@ -684,7 +684,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope!=\"Write\", scope!=\"Read\", unit=\"95thPercentile\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope!=\"Write\", scope!=\"Read\", unit=\"95thPercentile\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.p95",
                 "refId": "A",
@@ -793,7 +793,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Read\", unit=\"OneMinuteRate\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Read\", unit=\"OneMinuteRate\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Requests.m1",
                 "refId": "A",
@@ -881,7 +881,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope=\"Write\", unit=\"OneMinuteRate\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope=\"Write\", unit=\"OneMinuteRate\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.Requests.m1",
                 "refId": "A",
@@ -969,7 +969,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{environment=\"$env\", data_center=\"$dc\", scope!=\"Read\", scope!=\"Write\", unit=\"OneMinuteRate\"}) by (environment, data_center, scope)",
+                "expr": "avg(org_apache_cassandra_metrics_ClientRequest_Latency{role=\"$role\", scope!=\"Read\", scope!=\"Write\", unit=\"OneMinuteRate\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.m1",
                 "refId": "A",
@@ -1107,7 +1107,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(org_apache_cassandra_metrics_DroppedMessages_Dropped{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, message_type)",
+                "expr": "avg(org_apache_cassandra_metrics_DroppedMessages_Dropped{role=\"$role\"}) by (role, message_type)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{message_type}}",
                 "refId": "A",
@@ -1207,7 +1207,7 @@
             ],
             "targets": [
               {
-                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host, keyspace, table)",
+                "expr": "max(org_apache_cassandra_metrics_Table_MaxRowSize{role=\"$role\"}) by (role, host, keyspace, table)",
                 "format": "table",
                 "legendFormat": "",
                 "refId": "A",
@@ -1259,7 +1259,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(org_apache_cassandra_metrics_Table_PendingCompactions{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host)",
+                "expr": "sum(org_apache_cassandra_metrics_Table_PendingCompactions{role=\"$role\"}) by (role, host)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.PendingCompactions",
                 "refId": "A",
@@ -1357,7 +1357,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"wait\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"wait\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "A",
@@ -1365,7 +1365,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"interrupt\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"interrupt\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "B",
@@ -1373,7 +1373,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"softirq\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"softirq\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "C",
@@ -1381,7 +1381,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"nice\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"nice\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "D",
@@ -1389,7 +1389,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"steal\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"steal\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "E",
@@ -1397,7 +1397,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"user\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"user\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "F",
@@ -1405,7 +1405,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"system\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"system\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "G",
@@ -1413,7 +1413,7 @@
                 "textEditor": false
               },
               {
-                "expr": "avg(collectd_cpu_percent{environment=\"$env\", data_center=\"$dc\", cpu=\"idle\"}) by (environment, cpu)",
+                "expr": "avg(collectd_cpu_percent{role=\"$role\", cpu=\"idle\"}) by (environment, cpu)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.cpu.{{cpu}}",
                 "refId": "H",
@@ -1537,7 +1537,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(collectd_load_shortterm{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center)",
+                "expr": "avg(collectd_load_shortterm{role=\"$role\"}) by (role)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.load.shortterm",
                 "refId": "A",
@@ -1648,7 +1648,7 @@
             ],
             "targets": [
               {
-                "expr": "sum(collectd_df_percent_bytes{environment=\"$env\", data_center=\"$dc\", type!=\"free\"}) by (environment, data_center, host, df)",
+                "expr": "sum(collectd_df_percent_bytes{role=\"$role\", type!=\"free\"}) by (role, host, df)",
                 "format": "table",
                 "legendFormat": "",
                 "refId": "A",
@@ -1735,7 +1735,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(collectd_df_percent_bytes{environment=\"$env\", data_center=\"$dc\", type!=\"free\"}) by (environment, data_center, host, df)",
+                "expr": "sum(collectd_df_percent_bytes{role=\"$role\", type!=\"free\"}) by (role, host, df)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{df}}",
                 "refId": "A",
@@ -1827,7 +1827,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(rate(collectd_interface_if_octets_rx_total{environment=\"$env\", data_center=\"$dc\"}[1m])) by (environment, data_center) * -1",
+                "expr": "sum(rate(collectd_interface_if_octets_rx_total{role=\"$role\"}[1m])) by (role) * -1",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.rx",
                 "refId": "A",
@@ -1835,7 +1835,7 @@
                 "textEditor": false
               },
               {
-                "expr": "sum(rate(collectd_interface_if_octets_tx_total{environment=\"$env\", data_center=\"$dc\"}[1m])) by (environment, data_center)",
+                "expr": "sum(rate(collectd_interface_if_octets_tx_total{role=\"$role\"}[1m])) by (role)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.tx",
                 "refId": "B",
@@ -2108,7 +2108,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "deriv(jvm_gc_ParNew{environment=\"$env\", data_center=\"$dc\", unit=\"CollectionTime\"}[1m])",
+                "expr": "deriv(jvm_gc_ParNew{role=\"$role\", unit=\"CollectionTime\"}[1m])",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.ParNew.{{unit}}",
                 "refId": "A",

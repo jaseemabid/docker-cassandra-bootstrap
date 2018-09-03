@@ -63,7 +63,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(io_cassandrareaper_jmx_JmxConnectionFactory_jmxConnectionsIntializer{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host, quantile)",
+                "expr": "avg(io_cassandrareaper_jmx_JmxConnectionFactory_jmxConnectionsIntializer{role=\"$role\"}) by (role, host, quantile)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{quantile}}",
                 "refId": "A",
@@ -154,7 +154,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "io_cassandrareaper_jmx_JmxConnectionFactory_jmxConnectionsIntializer_count{environment=\"$env\", data_center=\"$dc\"}",
+                "expr": "io_cassandrareaper_jmx_JmxConnectionFactory_jmxConnectionsIntializer_count{role=\"$role\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}{{host}}",
                 "refId": "A",
@@ -246,7 +246,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(io_cassandrareaper_service_SegmentRunner_open_files{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host, quantile)",
+                "expr": "avg(io_cassandrareaper_service_SegmentRunner_open_files{role=\"$role\"}) by (role, host, quantile)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{quantile}}",
                 "refId": "A",
@@ -338,7 +338,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(io_cassandrareaper_service_SegmentRunner_releaseLead{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host, quantile)",
+                "expr": "avg(io_cassandrareaper_service_SegmentRunner_releaseLead{role=\"$role\"}) by (role, host, quantile)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{quantile}}",
                 "refId": "A",
@@ -429,7 +429,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "avg(io_cassandrareaper_service_SegmentRunner_takeLead{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center, host, quantile)",
+                "expr": "avg(io_cassandrareaper_service_SegmentRunner_takeLead{role=\"$role\"}) by (role, host, quantile)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{quantile}}",
                 "refId": "A",

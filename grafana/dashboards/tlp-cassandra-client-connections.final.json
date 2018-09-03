@@ -66,14 +66,14 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_Client_connectedNativeClients{environment=\"$env\", data_center=\"$dc\"}",
+                "expr": "org_apache_cassandra_metrics_Client_connectedNativeClients{role=\"$role\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.connectedNativeClients",
                 "refId": "A",
                 "target": "aliasByNode(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.Client.connectedNativeClients.value, 3, 9)"
               },
               {
-                "expr": "org_apache_cassandra_metrics_Client_connectedThriftClients{environment=\"$env\", data_center=\"$dc\"}",
+                "expr": "org_apache_cassandra_metrics_Client_connectedThriftClients{role=\"$role\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.connectedThriftClients",
                 "refId": "B",
@@ -153,7 +153,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(org_apache_cassandra_metrics_Client_connectedNativeClients{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center)",
+                "expr": "sum(org_apache_cassandra_metrics_Client_connectedNativeClients{role=\"$role\"}) by (role)",
                 "format": "time_series",
                 "hide": false,
                 "legendFormat": "{{environment}}.{{data_center}}.connectedNativeClients",
@@ -161,7 +161,7 @@
                 "target": "aliasByNode(sumSeriesWithWildcards(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.Client.connectedNativeClients.value, 3), 2, 8)"
               },
               {
-                "expr": "sum(org_apache_cassandra_metrics_Client_connectedThriftClients{environment=\"$env\", data_center=\"$dc\"}) by (environment, data_center)",
+                "expr": "sum(org_apache_cassandra_metrics_Client_connectedThriftClients{role=\"$role\"}) by (role)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.connectedThriftClients",
                 "refId": "B",
@@ -243,7 +243,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ClientRequest_Timeouts{environment=\"$env\", data_center=\"$dc\", unit=\"OneMinuteRate\"}",
+                "expr": "org_apache_cassandra_metrics_ClientRequest_Timeouts{role=\"$role\", unit=\"OneMinuteRate\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.m1",
                 "refId": "A",
@@ -324,7 +324,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(org_apache_cassandra_metrics_ClientRequest_Timeouts{environment=\"$env\", data_center=\"$dc\", unit=\"OneMinuteRate\"}) by (environment, data_center, scope)",
+                "expr": "sum(org_apache_cassandra_metrics_ClientRequest_Timeouts{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.m1",
                 "refId": "A",
@@ -406,7 +406,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ClientRequest_Unavailables{environment=\"$env\", data_center=\"$dc\", unit=\"OneMinuteRate\"}",
+                "expr": "org_apache_cassandra_metrics_ClientRequest_Unavailables{role=\"$role\", unit=\"OneMinuteRate\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.m1",
                 "refId": "A",
@@ -488,7 +488,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(org_apache_cassandra_metrics_ClientRequest_Unavailables{environment=\"$env\", data_center=\"$dc\", unit=\"OneMinuteRate\"}) by (environment, data_center, scope)",
+                "expr": "sum(org_apache_cassandra_metrics_ClientRequest_Unavailables{role=\"$role\", unit=\"OneMinuteRate\"}) by (role, scope)",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{scope}}.m1",
                 "refId": "B",
@@ -581,21 +581,21 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"ActiveTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"ActiveTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "A",
                 "target": "aliasByNode(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.ThreadPools.transport.Native-Transport-Requests.ActiveTasks.value, 3, 11)"
               },
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"PendingTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"PendingTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "D",
                 "target": "aliasByNode(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.ThreadPools.transport.Native-Transport-Requests.PendingTasks.value, 3, 11)"
               },
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"CurrentlyBlockedTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"CurrentlyBlockedTasks\", thread_type=\"transport\", thread_pool=\"Native-Transport-Requests\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "C",
@@ -675,21 +675,21 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"ActiveTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"ActiveTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "A",
                 "target": "aliasByNode(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.ThreadPools.request.RequestResponseStage.ActiveTasks.value, 3, 11)"
               },
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"PendingTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"PendingTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "B",
                 "target": "aliasByNode(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.ThreadPools.request.RequestResponseStage.PendingTasks.value, 3, 11)"
               },
               {
-                "expr": "org_apache_cassandra_metrics_ThreadPools{environment=\"$env\", data_center=\"$dc\", status_pool=\"CurrentlyBlockedTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
+                "expr": "org_apache_cassandra_metrics_ThreadPools{role=\"$role\", status_pool=\"CurrentlyBlockedTasks\", thread_type=\"request\", thread_pool=\"RequestResponseStage\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{thread_pool}}.{{status_pool}}",
                 "refId": "C",
@@ -781,7 +781,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_CQL_PreparedStatementsCount{environment=\"$env\", data_center=\"$dc\"}",
+                "expr": "org_apache_cassandra_metrics_CQL_PreparedStatementsCount{role=\"$role\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.PreparedStatementsCount",
                 "refId": "A",
@@ -861,7 +861,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "deriv(org_apache_cassandra_metrics_CQL_PreparedStatementsEvicted{environment=\"$env\", data_center=\"$dc\"}[5m])",
+                "expr": "deriv(org_apache_cassandra_metrics_CQL_PreparedStatementsEvicted{role=\"$role\"}[5m])",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.PreparedStatementsEvicted",
                 "refId": "A",
@@ -941,7 +941,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "org_apache_cassandra_metrics_CQL_PreparedStatementsRatio{environment=\"$env\", data_center=\"$dc\"}",
+                "expr": "org_apache_cassandra_metrics_CQL_PreparedStatementsRatio{role=\"$role\"}",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.PreparedStatementsRatio",
                 "refId": "A",
@@ -1021,7 +1021,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "deriv(org_apache_cassandra_metrics_CQL_RegularStatementsExecuted{environment=\"$env\", data_center=\"$dc\"}[5m])",
+                "expr": "deriv(org_apache_cassandra_metrics_CQL_RegularStatementsExecuted{role=\"$role\"}[5m])",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.RegularStatementsExecuted",
                 "refId": "A",
@@ -1113,14 +1113,14 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "deriv(org_apache_cassandra_metrics_ClientRequest_ConditionNotMet{environment=\"$env\", data_center=\"$dc\"}[5m])",
+                "expr": "deriv(org_apache_cassandra_metrics_ClientRequest_ConditionNotMet{role=\"$role\"}[5m])",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.ConditionNotMet",
                 "refId": "A",
                 "target": "aliasByNode(perSecond(cassandra.$env.$dc.$host.org.apache.cassandra.metrics.ClientRequest.*.ConditionNotMet.count), 3, 9, 10)"
               },
               {
-                "expr": "deriv(org_apache_cassandra_metrics_ClientRequest_UnfinishedCommit{environment=\"$env\", data_center=\"$dc\"}[5m])",
+                "expr": "deriv(org_apache_cassandra_metrics_ClientRequest_UnfinishedCommit{role=\"$role\"}[5m])",
                 "format": "time_series",
                 "legendFormat": "{{environment}}.{{data_center}}.{{host}}.{{scope}}.UnfinishedCommit",
                 "refId": "C",
