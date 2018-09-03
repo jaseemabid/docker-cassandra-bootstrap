@@ -3860,7 +3860,7 @@
           "text": "environment",
           "value": "environment"
         },
-        "datasource": "prometheus",
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": false,
         "label": "Environment",
@@ -3883,7 +3883,7 @@
           "text": "data_center",
           "value": "data_center"
         },
-        "datasource": "prometheus",
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": false,
         "label": "Data Center",
@@ -3906,7 +3906,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "prometheus",
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": true,
         "label": "Host",
