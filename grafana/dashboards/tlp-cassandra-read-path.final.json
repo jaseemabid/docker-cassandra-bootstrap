@@ -3796,11 +3796,11 @@
         "datasource": "Prometheus",
         "hide": 0,
         "includeAll": false,
-        "label": "Environment",
+        "label": "Role",
         "multi": false,
-        "name": "env",
+        "name": "role",
         "options": [],
-        "query": "label_values(org_apache_cassandra_metrics_Storage_Load, environment)",
+        "query": "label_values(node_boot_time, ec2_tag_role)",
         "refresh": 2,
         "regex": "",
         "sort": 1,
@@ -3809,52 +3809,6 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": true
-      },
-      {
-        "allValue": "",
-        "current": {
-          "text": "data_center",
-          "value": "data_center"
-        },
-        "datasource": "Prometheus",
-        "hide": 0,
-        "includeAll": false,
-        "label": "Data Center",
-        "multi": false,
-        "name": "dc",
-        "options": [],
-        "query": "label_values(org_apache_cassandra_metrics_Storage_Load, data_center)",
-        "refresh": 2,
-        "regex": "",
-        "sort": 1,
-        "tagValuesQuery": null,
-        "tags": [],
-        "tagsQuery": null,
-        "type": "query",
-        "useTags": false
-      },
-      {
-        "allValue": null,
-        "current": {
-          "text": "All",
-          "value": "$__all"
-        },
-        "datasource": "Prometheus",
-        "hide": 0,
-        "includeAll": true,
-        "label": "Host",
-        "multi": false,
-        "name": "host",
-        "options": [],
-        "query": "label_values(org_apache_cassandra_metrics_Storage_Load, host)",
-        "refresh": 2,
-        "regex": "",
-        "sort": 1,
-        "tagValuesQuery": null,
-        "tags": [],
-        "tagsQuery": null,
-        "type": "query",
-        "useTags": false
       }
     ]
   },
