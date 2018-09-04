@@ -37,7 +37,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 0,
             "format": "none",
             "gauge": {
@@ -130,7 +130,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 0,
             "format": "none",
             "gauge": {
@@ -223,7 +223,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 0,
             "format": "none",
             "gauge": {
@@ -315,7 +315,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 1,
             "format": "none",
             "gauge": {
@@ -396,7 +396,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 0,
             "format": "none",
             "gauge": {
@@ -475,7 +475,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 1,
             "format": "kbytes",
             "gauge": {
@@ -556,7 +556,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 1,
             "format": "kbytes",
             "gauge": {
@@ -635,7 +635,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 1,
             "format": "bytes",
             "gauge": {
@@ -716,7 +716,7 @@
               "rgba(237, 129, 40, 0.89)",
               "rgba(50, 172, 45, 0.97)"
             ],
-            "datasource": null,
+            "datasource": "Prometheus",
             "decimals": 1,
             "format": "bytes",
             "gauge": {

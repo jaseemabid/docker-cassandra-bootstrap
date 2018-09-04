@@ -33,7 +33,7 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": null,
+            "datasource": "Prometheus",
             "fill": 1,
             "id": 1,
             "legend": {
@@ -124,7 +124,7 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": null,
+            "datasource": "Prometheus",
             "fill": 1,
             "id": 2,
             "legend": {
@@ -216,7 +216,7 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": null,
+            "datasource": "Prometheus",
             "fill": 1,
             "id": 3,
             "legend": {
@@ -308,7 +308,7 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": null,
+            "datasource": "Prometheus",
             "fill": 1,
             "id": 4,
             "legend": {
@@ -399,7 +399,7 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": null,
+            "datasource": "Prometheus",
             "fill": 1,
             "id": 5,
             "legend": {
